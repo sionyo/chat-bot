@@ -16,7 +16,7 @@ connectDB();
 // Middleware
 app.use(cors({
   origin: [
-    'https://simoncontentgen20.netlify.app',
+    'https://simoncontentgen.netlify.app',
     'http://localhost:5173',
     'http://127.0.0.1:5173'
   ],

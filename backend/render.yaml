@@ -1,0 +1,15 @@
+# render.yaml
+services:
+  - type: web
+    name: backend
+    env: node
+    plan: free
+    region: ohio
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    # Add MONGODB_URI manually in Render dashboard

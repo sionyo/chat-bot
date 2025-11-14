@@ -2,7 +2,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL
 
 export const startConversation = async (guestId) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/chat/start`, {
+    const response = await fetch(`${API_BASE_URL}/api/chat/start`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ export const startConversation = async (guestId) => {
 
 export const sendMessage = async (guestId, message) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/chat/message`, {
+    const response = await fetch(`${API_BASE_URL}/api/chat/message`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ export const sendMessage = async (guestId, message) => {
 
 export const getConversation = async (guestId) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/chat/${guestId}`);
+    const response = await fetch(`${API_BASE_URL}/api/chat/${guestId}`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
